@@ -2,9 +2,9 @@
 Static data used in FRDR taken from authority registries
 
 Data files must be CSV format.  Column order:
-uri,country_code,name_en,name_fr,altnames
+id,country_code,name_en,name_fr,altnames
 
-* **uri**: the item URI from the registry; must start with "http" or "https"
+* **id**: the item unique ID from the registry; usually starts with "http" or "https"
 * **country_code**: 2 letter ISO 3166 code, upper case. See https://www.iso.org/iso-3166-country-codes.html
 * **name_en**: The English display name for the item. If the name contains a comma it must quoted.
 * **name_fr**: The French display name for the item. If the name contains a comma it must quoted.
