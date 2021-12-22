@@ -9,5 +9,6 @@ id,country_code,name_en,name_fr,altnames
 * **name_en**: The English display name for the item. If the name contains a comma it must quoted.
 * **name_fr**: The French display name for the item. If the name contains a comma it must quoted.
 * **altnames**: A delimited list of all alternatives names for the item. The delimiter pattern is set in the configuration table org_registries, so it may vary by registry. Any names that contain the delimiter pattern or a comma must be quoted.
+* **tags** A delimited list of tags to be applied to an item.
 
 Data files cannot be renamed as there are automated processes that expect them to have a certain name in this repo.
