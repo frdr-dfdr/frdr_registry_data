@@ -18,4 +18,4 @@ Data files cannot be renamed as there are automated processes that expect them t
 For each FRDR instance that you want to update:
 
 1. Deploy the site.yml playbook using keyword `orgregistry`
-2. Log into the web VM, become user dspace, and run: `/dspace/bin/dspace org-registry update`
+2. Log into the web VM, become user dspace, and run: `/dspace/bin/dspace org-registry delete` then `/dspace/bin/dspace org-registry load`
