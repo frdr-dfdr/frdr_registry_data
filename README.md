@@ -1,14 +1,20 @@
 # FRDR Registry Data
 Static data used in FRDR taken from authority registries
 
-Data files must be CSV format.  Column order:
-id,country_code,name_en,name_fr,altnames
-
-* **id**: the item unique ID from the registry; usually starts with "http" or "https"
-* **country_code**: 2 letter ISO 3166 code, upper case. See https://www.iso.org/iso-3166-country-codes.html
-* **name_en**: The English display name for the item. If the name contains a comma it must quoted.
-* **name_fr**: The French display name for the item. If the name contains a comma it must quoted.
-* **altnames**: A delimited list of all alternatives names for the item. The delimiter pattern is set in the configuration table org_registries, so it may vary by registry. Any names that contain the delimiter pattern or a comma must be quoted.
-* **tags** A delimited list of tags to be applied to an item.
+Data files must be JSON format. At present only [ROR version 2 schema](https://ror.readme.io/v2/docs/data-structure) is supported.
 
 Data files cannot be renamed as there are automated processes that expect them to have a certain name in this repo.
+
+## Updating ROR Data
+
+1. Locate the latest [ROR data dump](https://ror.readme.io/docs/data-dump) it will be on Zenodo
+2. Download the Zip file of this dataset, it will be named something like `v1.45.1-2024-04-18-ror-data.zip`
+3. Unzip the downloaded file
+4. Rename the file from `v1.45.1-2024-04-18-ror-data_schema_v2.json` to `ror_v2.json`
+5. Move `ror_v2.json` into your local copy of this repo
+6. Commit and push
+
+For each FRDR instance that you want to update:
+
+1. Deploy the site.yml playbook using keyword `orgregistry`
+2. Log into the web VM, become user dspace, and run: `/dspace/bin/dspace org-registry update`
