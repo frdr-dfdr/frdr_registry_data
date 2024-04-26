@@ -11,8 +11,9 @@ Data files cannot be renamed as there are automated processes that expect them t
 2. Download the Zip file of this dataset, it will be named something like `v1.45.1-2024-04-18-ror-data.zip`
 3. Unzip the downloaded file
 4. Rename the file from `v1.45.1-2024-04-18-ror-data_schema_v2.json` to `ror_v2.json`
-5. Move `ror_v2.json` into your local copy of this repo
-6. Commit and push
+5. Zip `ror_v2.json` into `ror_v2.zip`
+6. Move `ror_v2.zip` into your local copy of this repo
+7. Commit and push
 
 For each FRDR instance that you want to update:
 
