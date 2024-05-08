@@ -5,7 +5,7 @@ Data files must be JSON format. At present only [ROR version 2 schema](https://r
 
 Data files cannot be renamed as there are automated processes that expect them to have a certain name in this repo.
 
-## Updating ROR Data
+## Updating ROR Data in this repo
 
 1. Locate the latest [ROR data dump](https://ror.readme.io/docs/data-dump) it will be on Zenodo
 2. Download the Zip file of this dataset, it will be named something like `v1.45.1-2024-04-18-ror-data.zip`
@@ -15,7 +15,10 @@ Data files cannot be renamed as there are automated processes that expect them t
 6. Move `ror_v2.zip` into your local copy of this repo
 7. Commit and push
 
-For each FRDR instance that you want to update:
+## Updating ROR Data in a Globus Publish environment
 
 1. Deploy the site.yml playbook using keyword `orgregistry`
-2. Log into the web VM, become user dspace, and run: `/dspace/bin/dspace org-registry delete` then `/dspace/bin/dspace org-registry load`
+2. Log into the web VM, become user dspace, and run:
+
+* `/dspace/bin/dspace org-registry delete`
+* `/dspace/bin/dspace org-registry load`
